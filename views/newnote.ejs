@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">ForgetPad</h3>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/features">Features</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div>
+                    <form action="/newnote" method="post">
+                        <h2 class="form-signin-heading">New Note</h2>
+                        <label for="inputTitle" class="sr-only">Title</label>
+                        <input type="text" name="title" id="inputTitle" class="form-control" placeholder="Title"
+                            style="width: 600px;" required autofocus>
+                        <label for="inputContent" class="sr-only">Content</label>
+                        <textarea name="content" id="inputContent" class="form-control" placeholder="Content"
+                            style="width: 600px; height: 300px;" required></textarea>
+                        <div class="inner cover">
+                            <button class="btn btn-lg btn-default" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <%- include('partials/footer') %>

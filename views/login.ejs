@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">ForgetPad</h3>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/features">Features</a></li>
+                                <li class="active"><a href="/login">Login</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="container">
+
+                    <form action="/login" class="form-signin" method="post">
+                        <h2 class="form-signin-heading">Sign In</h2>
+                        <label for="inputEmail" class="sr-only">Username</label>
+                        <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Username" required
+                            autofocus>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <div class="inner cover">
+                            <button class="btn btn-lg btn-default" type="submit">Sign in</button>
+                        </div>
+                        <p style="padding-top: 10px;"><a href="/signup">Or Sign Up</a></p>
+                    </form>
+
+                </div> <!-- /container -->
+                <%- include('partials/footer') %>
